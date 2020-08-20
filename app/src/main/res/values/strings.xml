@@ -1,0 +1,45 @@
+<resources>
+    <string name="app_name">CodeChallange-GameSuit</string>
+    <string name="splashimage">SplashImage</string>
+
+    <string name="text_splash_satu">Bermain Suit melawan sesama pemain</string>
+    <string name="text_splash_dua">Bermain Suit melawan komputer</string>
+    <string name="text_splash_tiga">Persiapkan dirimu!</string>
+    <string name="text_pilih_lawan">Pilih lawanmu</string>
+    <string name="text_versus_player">vs Player</string>
+    <string name="text_versus_cpu">vs CPU</string>
+    <string name="txt_dummy_user">Fritzent</string>
+
+    <string name="txt_rock">Rock</string>
+    <string name="txt_scissors">Scissors</string>
+    <string name="txt_paper">Paper</string>
+    <string name="txt_player">Player</string>
+    <string name="txt_com">Com</string>
+    <string name="txt_dummy">dummy</string>
+    <string name="results">Results</string>
+    <string name="txt_try_again">Click To Try Again</string>
+    <string name="message">Do you want to close the application?</string>
+    <string name="start">GOT IT</string>
+
+    <string name="txt_blank"> </string>
+    <string name="txt_draw">draw</string>
+    <string name="txt_player_win">Player Win</string>
+    <string name="txt_com_win">Com Winner</string>
+    <string name="ready">Ready</string>
+    <string name="skip">SKIP</string>
+    <string name="next">NEXT</string>
+    <string name="txt_previuous">PREVIOUS</string>
+    <string name="version_app">V.1.0.0</string>
+    <string name="home">Home</string>
+    <string name="exit">Exit</string>
+    <string name="txt_save">SAVE</string>
+    <string name="txt_username">Username</string>
+    <string name="txt_password">Password</string>
+    <string name="password_default">binar123</string>
+    <string name="username_default">sabrina</string>
+    <string name="txt_login">Login</string>
+    <string name="text_reset">Reset</string>
+    <string name="txt_data_profile">Data Profile</string>
+    <string name="txt_email">Email</string>
+    <string name="txt_memo_kamu">Memo Kamu</string>
+</resources>

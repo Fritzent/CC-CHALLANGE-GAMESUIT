@@ -42,4 +42,8 @@
     <string name="txt_data_profile">Data Profile</string>
     <string name="txt_email">Email</string>
     <string name="txt_memo_kamu">Memo Kamu</string>
+    <string name="txt_tanggal">Tanggal</string>
+    <string name="dummy_date">2020-03-27</string>
+    <string name="txt_isi_memo">Isi Memo</string>
+    <string name="dummy_memo">Hari ini sangat menyenangkan</string>
 </resources>

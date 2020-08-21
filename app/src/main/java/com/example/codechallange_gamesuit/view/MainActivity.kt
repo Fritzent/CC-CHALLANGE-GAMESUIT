@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
 
         bindingMain.imageTopCpu.setOnClickListener {
             //TODO here code to go to player vs player game
+            startActivity(Intent(applicationContext, GameActivityPlayer::class.java))
         }
 
         bindingMain.ivUserProfile.setOnClickListener {

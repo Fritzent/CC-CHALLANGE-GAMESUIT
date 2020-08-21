@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideStartAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideEndAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideTopAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <TextView
+        android:id="@+id/tv_title_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/txt_update_memo_kamu"
+        android:textColor="@color/colorFont"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@id/guideTopAdd"
+        app:layout_constraintStart_toStartOf="@id/guideStartAdd"
+        app:layout_constraintTop_toTopOf="@id/guideTopAdd" />
+
+    <TextView
+        android:id="@+id/tv_tanggal_memo_title_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/txt_tanggal"
+        android:textColor="@color/colorBlue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/guideStartAdd"
+        app:layout_constraintTop_toBottomOf="@id/tv_title_update" />
+
+    <EditText
+        android:id="@+id/et_tanggal_memo_update"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autofillHints="@string/dummy_date"
+        android:backgroundTint="@color/colorBlue"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:hint="@string/dummy_date"
+        android:textColor="@color/colorFont"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@id/guideEndAdd"
+        app:layout_constraintStart_toStartOf="@id/guideStartAdd"
+        app:layout_constraintTop_toBottomOf="@id/tv_tanggal_memo_title_update" />
+
+    <TextView
+        android:id="@+id/tv_isi_memo_title_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="sans-serif"
+        android:text="@string/txt_isi_memo"
+        android:textColor="@color/colorBlue"
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="@id/guideStartAdd"
+        app:layout_constraintTop_toBottomOf="@id/et_tanggal_memo_update" />
+
+    <EditText
+        android:id="@+id/et_isi_memo_update"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:autofillHints="@string/dummy_memo"
+        android:backgroundTint="@color/colorBlue"
+        android:fontFamily="sans-serif"
+        android:inputType="text"
+        android:textColor="@color/colorFont"
+        android:textSize="16sp"
+        android:hint="@string/dummy_memo"
+        app:layout_constraintEnd_toEndOf="@id/guideEndAdd"
+        app:layout_constraintStart_toStartOf="@id/guideStartAdd"
+        app:layout_constraintTop_toBottomOf="@id/tv_isi_memo_title_update" />
+
+    <Button
+        android:id="@+id/btn_update_memo"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorWhite"
+        android:fontFamily="sans-serif-black"
+        android:text="@string/txt_update"
+        android:textColor="@color/colorBlue"
+        app:layout_constraintEnd_toEndOf="@id/guideEndAdd"
+        app:layout_constraintTop_toBottomOf="@id/et_isi_memo_update" />
+
+    <Button
+        android:id="@+id/btn_delete_memo_update"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorWhite"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/txt_delete"
+        android:textColor="@color/colorRed"
+        app:layout_constraintEnd_toStartOf="@id/btn_update_memo"
+        app:layout_constraintTop_toBottomOf="@id/et_isi_memo_update" />
+    <Button
+        android:id="@+id/btn_cancel_memo_update"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@color/colorWhite"
+        android:fontFamily="sans-serif-medium"
+        android:text="@string/txt_cancel"
+        android:textColor="@color/colorBlue"
+        app:layout_constraintEnd_toStartOf="@id/btn_delete_memo_update"
+        app:layout_constraintTop_toBottomOf="@id/et_isi_memo_update" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

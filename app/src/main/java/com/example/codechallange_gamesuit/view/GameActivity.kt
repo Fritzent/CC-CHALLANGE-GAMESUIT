@@ -90,7 +90,7 @@ class GameActivity : AppCompatActivity() {
         }
 
         bindingGame.playerscissorschoose.setOnClickListener {
-            playerChoose = "paper"
+            playerChoose = "scissors"
             Log.d("Player", playerChoose)
             computerChoose = itemList.random()
 

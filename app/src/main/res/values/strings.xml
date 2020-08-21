@@ -46,4 +46,15 @@
     <string name="dummy_date">2020-03-27</string>
     <string name="txt_isi_memo">Isi Memo</string>
     <string name="dummy_memo">Hari ini sangat menyenangkan</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="txt_tambah_memo_kamu">Tambah Memo Kamu</string>
+    <string name="txt_tambah">TAMBAH</string>
+    <string name="txt_cancel">CANCEL</string>
+    <string name="txt_update_memo_kamu">Update Memo Kamu</string>
+    <string name="txt_update">Update</string>
+    <string name="txt_delete">Delete</string>
+
+    <string name="player_two_win">Player 2 Win</string>
+    <string name="player_one_win">Player 1 Win</string>
 </resources>

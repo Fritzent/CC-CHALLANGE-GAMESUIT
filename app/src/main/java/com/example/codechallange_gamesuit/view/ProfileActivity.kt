@@ -6,11 +6,17 @@ import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
 import android.util.Log
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.codechallange_gamesuit.adapter.MemoAdapter
+import com.example.codechallange_gamesuit.database.DatabaseMemo
+import com.example.codechallange_gamesuit.database.Memo
 import com.example.codechallange_gamesuit.databinding.ActivityProfileBinding
-
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.launch
 class ProfileActivity : AppCompatActivity() {
 
     private lateinit var bindingProfile: ActivityProfileBinding
+    private lateinit var  db: DatabaseMemo
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,6 +24,10 @@ class ProfileActivity : AppCompatActivity() {
         val viewProfile = bindingProfile.root
         setContentView(viewProfile)
 
+        val fm = supportFragmentManager
+        val addMemo = AddMemo()
+
+        //here for the sharedpreferences data
         val sharedPreferences = getSharedPreferences(LoginActivity.SP_NAMA, Context.MODE_PRIVATE)
         val usernameInSp = sharedPreferences.getString(LoginActivity.FIELD_USERNAME, "sabrina")
         val emailInSp = sharedPreferences.getString(LoginActivity.FIELD_EMAIL, "sabrina@binar.co.id")
@@ -64,5 +74,36 @@ class ProfileActivity : AppCompatActivity() {
             }
         })
 
+        bindingProfile.fabProfileMemo.setOnClickListener {
+            //here code to open the memo
+            addMemo.show(fm, "Add Memo")
+        }
+
+
+        DatabaseMemo.getInstance(this)?.let {
+            db = it
+        }
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        fetchData()
+    }
+
+    fun fetchData() {
+        GlobalScope.launch {
+            val listMemo = db.memoDao().getAll()
+
+            runOnUiThread {
+                bindingProfile.rvProfileMemo.layoutManager = LinearLayoutManager(this@ProfileActivity, LinearLayoutManager.VERTICAL, false)
+                val adapter = MemoAdapter(listMemo)
+                bindingProfile.rvProfileMemo.adapter = adapter
+            }
+        }
+    }
+
+    fun editMemo(date: String, memo: String, list:Memo) {
+        UpdateMemo.newInstance(date, memo, list).show(supportFragmentManager, null)
     }
 }
